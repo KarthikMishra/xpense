@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { useEffect } from 'react';
 import ExpenseTable from "./ExpenseTable";
 import LinebarChart from "./LinebarChart";
-import PieChart from "./Piechart";
+import PieChart from "./PieChart";
 import Modal from 'react-modal'
 import { v4 as uuidv4 } from "uuid";
 
