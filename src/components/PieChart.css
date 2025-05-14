@@ -1,0 +1,17 @@
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for opacity */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle white border */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the element */
+}
+
+.chart-legend {
+    font-weight: bold;
+    font-family: cursive;
+}

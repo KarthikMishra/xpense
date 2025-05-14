@@ -1,0 +1,229 @@
+.expense-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expense-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.expense-row:last-child {
+    border-bottom: none;
+}
+
+.expense-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /* Adjust size as necessary */
+    height: 40px;
+    /* Adjust size as necessary */
+    border-radius: 20px;
+    /* Adjust for round shape */
+    background-color: #a1a1a1;
+    /* Icon background color */
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expense-row-icon-title {
+    display: flex;
+}
+
+.expense-title-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-category-icon {
+    font-size: 24px;
+    /* Increase the size as needed */
+    color: #555;
+    /* Or any color that provides good contrast */
+}
+
+.expense-icon i {
+    color: #333333;
+    /* Icon color */
+}
+
+.expense-title {
+    flex: 1;
+    margin-right: 10px;
+    /* Space between title and date */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.expense-date {
+    color: #666;
+    margin-right: 10px;
+    /* Space between date and price */
+}
+
+.expense-price {
+    color: #e63e3e;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination button {
+    color: #009879;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #009879;
+    background: none;
+    cursor: pointer;
+}
+
+.pagination button:hover,
+.pagination button.active {
+    background-color: #009879;
+    color: white;
+}
+
+.pagination button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.fas {
+    margin-right: 10px;
+    /* space after the icon */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.pagination button {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.pagination button:disabled {
+    color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #009879;
+    color: white;
+}
+
+.expense-actions {
+    display: flex;
+    align-items: center;
+}
+
+.expense-price {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.action-btn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.edit-btn {
+    color: #4caf50;
+    /* Green */
+}
+
+.delete-btn {
+    color: #f44336;
+    /* Red */
+}
+
+.action-btn:hover {
+    opacity: 0.7;
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for opacity */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle white border */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the element */
+}
+
+.glassmorphismButton,
+input,
+select,
+select>option {
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for opacity */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle white border */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the element */
+    margin: 10px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.modal-header {
+    margin: 0 auto;
+    color: rgb(20, 20, 20);
+}
+
+.modal-form-income {
+    display: flex;
+    padding: 10px;
+}
+
+.expense-price-edit-delete-container {
+    display: flex;
+}
+
+button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+.dashboard-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.wallet-container {
+    height: fit-content;
+    margin: 40px;
+    padding: 20px;
+    /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for opacity */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle white border */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the element */
+}
+
+.glassmorphismButton,
+input,
+select,
+select>option {
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for opacity */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Subtle white border */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the element */
+    margin: 10px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.wallet-card-container {
+    margin: 40px;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.wallet-income-expense-container {
+    width: 50%;
+    display: flex;
+}
+
+.wallet-card-container>button {
+    width: 60%;
+    margin: 10px auto;
+    height: 50px;
+    cursor: pointer;
+}
+
+.income-amount {
+    color: green;
+}
+
+.expense-amount {
+    color: red;
+}
+
+.modal-header {
+    margin: 0 auto;
+}
+
+.modal-form-income {
+    display: flex;
+    padding: 10px;
+}
+
+.select-option>option {
+    padding: 5px;
+}
