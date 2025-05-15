@@ -144,7 +144,7 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
                   })}
                 </div>
                 <div className="expense-title-date">
-                  <div className="expense-title">item.title</div>
+                  <div className="expense-title">{item.title}</div>
                   <div className="expense-date">{formatDate(item.date)}</div>
                 </div>
               </div>
