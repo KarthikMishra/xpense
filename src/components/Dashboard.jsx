@@ -5,6 +5,7 @@ import LinebarChart from "./LinebarChart";
 import PieChart from "./PieChart";
 import Modal from 'react-modal'
 import { v4 as uuidv4 } from "uuid";
+import "./Dashboard.css"
 
 Modal.setAppElement("#root");
 
@@ -13,16 +14,15 @@ export default function Dashboard() {
         localStorage.getItem("walletBalance")?JSON.parse(localStorage.getItem("walletBalance")):5000
     );
 
-    useEffect(() => {
-        localStorage.setItem("walletBalance", walletBalance);
-    },[])
-
 
     const [expenses, setExpenses] = useState(
-        localStorage.getItem("expenses")?.length > 0
-            ? JSON.parse(localStorage.getItem("expenses"))
-            : []
+        localStorage.getItem("expenses")?JSON.parse(localStorage.getItem("expenses")):[]
     );
+
+    useEffect(() => {
+        localStorage.setItem("walletBalance", walletBalance);
+        localStorage.setItem("expenses", expenses);
+    },[])
 
     const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
     const [isIncomeModalOpen, setIsIncomeModalOpen] = useState(false);
@@ -35,11 +35,9 @@ export default function Dashboard() {
     });
     const [newIncome, setNewIncome] = useState("");
 
-    function getTotalExpenses(expenses) {
-        if(expenses){
+    function getTotalExpenses() {
             return expenses.reduce((total, expense) => 
                 total + parseInt(expense.price, 10),0);
-        } else return 0;
     };
 
     const categories = ["Food",
@@ -128,26 +126,28 @@ export default function Dashboard() {
     return(
         <div>
             <div className="dashboard-container">
-            <div className="wallet-container glassmorphism">
+                <h1>Expense Tracker</h1>
+            <div className="wallet-container">
             <div className="wallet-income-expense-container">
-            <div className="wallet-card-container glassmorphism"> 
-            <h2>Wallet Balance: ₹{walletBalance}</h2>
+            <div className="wallet-card-container"> 
+            <h2>Wallet Balance: <span className="income-amount">₹{walletBalance}</span></h2>
             <button
                 onClick={() => setIsIncomeModalOpen(true)}
             >
             + Add Income
             </button>
             </div>
-            <div className="wallet-card-container glassmorphism">
-            <h2> Expenses: ₹{getTotalExpenses()}</h2>
+            <div className="wallet-card-container">
+            <h2> Expenses: <span className="expense-amount">₹{getTotalExpenses()}</span></h2>
             <button
                 onClick={() => setIsExpenseModalOpen(true)}
             >
              + Add Expense   
             </button>
             </div>
-            </div>
             <PieChart data={expenses} />
+            </div>
+            
             <Modal
                 isOpen={isIncomeModalOpen}
                 onRequestClose={() => setIsIncomeModalOpen(false)}

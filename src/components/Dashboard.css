@@ -1,14 +1,16 @@
+.dashboard-container {
+    background-color: #3b3b3b;
+}
+
 .dashboard-info-container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     margin: 40px;
 }
 
 .wallet-container {
-    height: fit-content;
-    margin: 40px;
-    padding: 20px;
+    height: 50vh;
     /* Adjust as needed */
     display: flex;
     align-items: center;
@@ -49,10 +51,11 @@ select>option {
 }
 
 .wallet-card-container {
-    margin: 40px;
-    padding: 20px;
-    min-width: 300px;
+    width: 20vw;
+    height: 10vh;
+    background-color: #9b9b9b;
     border-radius: 12px;
+    padding:5vh;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -60,8 +63,11 @@ select>option {
 }
 
 .wallet-income-expense-container {
-    width: 50%;
+    width: 100vw;
+    height: 50vh;
     display: flex;
+    align-items: space-between;
+    justify-content: space-between;
 }
 
 .wallet-card-container>button {
@@ -90,4 +96,8 @@ select>option {
 
 .select-option>option {
     padding: 5px;
+}
+
+h1 {
+    color: azure;
 }

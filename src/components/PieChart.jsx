@@ -25,7 +25,7 @@ const RoundChart = ({ data }) => {
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF"];
 
   return (
-    <PieChart className="chart " width={400} height={400}>
+    <PieChart className="chart " width={350} height={350}>
       <Pie
         data={processedData}
         cx="50%"
