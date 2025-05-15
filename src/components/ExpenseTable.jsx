@@ -133,8 +133,7 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
     <>
       <div className="expense-container">
         <h2>Recent Transactions & Top Expenses</h2>
-        <br />
-        <div className="wallet-card-container">
+        <br /> 
         <div className="expense-table-container">
           {currentItems.map((item, index) => (
             <div className="expense-row" key={index}>
@@ -150,8 +149,10 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
                 </div>
               </div>
               <div className="expense-price-edit-delete-container">
+                <div className="wallet-card-container">
                 <div className="expense-price">
                   ₹{parseInt(item.price, 10).toLocaleString()}
+                </div>
                 </div>
                 <button
                   className="action-btn edit-btn"
@@ -186,7 +187,7 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
             </button>
           </div>
         </div>
-        </div>
+              
       </div>
       <Modal
         isOpen={isModalOpen}
