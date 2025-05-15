@@ -132,9 +132,10 @@ export default function Dashboard() {
             <div className="wallet-card-container"> 
             <h2>Wallet Balance: <span className="income-amount">₹{walletBalance}</span></h2>
             <button
+                className="glassmorphism"
                 onClick={() => setIsIncomeModalOpen(true)}
             >
-            + Add Income
+            Add Balance
             </button>
             </div>
             <div className="wallet-card-container">
