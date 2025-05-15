@@ -92,7 +92,7 @@ export default function Dashboard() {
         });
     };
 
-    const addIncome = (e) => {
+    const addBalance = (e) => {
         e.preventDefault();
         if (!isNaN(newIncome) && newIncome.trim() !== "") {
         setWalletBalance((prevBalance) => prevBalance + parseInt(newIncome, 10));
@@ -152,10 +152,10 @@ export default function Dashboard() {
                 isOpen={isIncomeModalOpen}
                 onRequestClose={() => setIsIncomeModalOpen(false)}
                 style={modalStyle}
-                contentLabel="Add New Income"
+                contentLabel="Add Balance"
             >
-                <h2 className="modal-header">Add New Income</h2>
-                <form className="modal-form-income" onSubmit={addIncome}>
+                <h2 className="modal-header">Add Balance</h2>
+                <form className="modal-form-income" onSubmit={addBalance}>
                 <input
                 className="glassmorphismButton"
                 name="income"
@@ -166,7 +166,7 @@ export default function Dashboard() {
                 required
                 ></input>
                 <button className="glassmorphismButton" type="submit">
-                    Add Income
+                    Add Balance
                 </button>
                 <button
                     className="glassmorphismButton"
