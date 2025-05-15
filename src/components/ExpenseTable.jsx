@@ -152,7 +152,6 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
                 <div className="wallet-card-container">
                 <div className="expense-price">
                   ₹{parseInt(item.price, 10).toLocaleString()}
-                  {" "} 4200 1200 1000 3000
                 </div>
                 </div>
                 <button
