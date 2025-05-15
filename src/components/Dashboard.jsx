@@ -135,7 +135,7 @@ export default function Dashboard() {
                 className="glassmorphism"
                 onClick={() => setIsIncomeModalOpen(true)}
             >
-            Add Balance
+            + Add Income
             </button>
             </div>
             <div className="wallet-card-container">
