@@ -134,6 +134,7 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
       <div className="expense-container">
         <h2>Recent Transactions & Top Expenses</h2>
         <br />
+        <div className="wallet-card-container">
         <div className="expense-table-container">
           {currentItems.map((item, index) => (
             <div className="expense-row" key={index}>
@@ -184,6 +185,7 @@ const ExpenseTable = ({ expenseData, handleExpenseListUpdate, categories }) => {
               &raquo;
             </button>
           </div>
+        </div>
         </div>
       </div>
       <Modal
