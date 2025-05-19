@@ -11,9 +11,8 @@ Modal.setAppElement("#root");
 
 export default function Dashboard() {
     const [walletBalance, setWalletBalance] = useState(
-        localStorage.getItem("walletBalance")?JSON.parse(localStorage.getItem("walletBalance")):5000
+        localStorage.getItem("walletBalance") ? JSON.parse(localStorage.getItem("walletBalance")) : 5000
     );
-
 
     const [expenses, setExpenses] = useState(
         localStorage.getItem("expenses")?JSON.parse(localStorage.getItem("expenses")):[]
@@ -51,14 +50,17 @@ export default function Dashboard() {
     function handleExpenseListUpdate(expenses){
         setExpenses(expenses);
         const totalBalance = 
-            localStorage.getItem("walletBalance") - getTotalExpenses();
+            walletBalance - getTotalExpenses();
         setWalletBalance(totalBalance);
         localStorage.setItem("expenses", JSON.stringify(expenses));    
     }
 
+    {/*
     useEffect(() => {
     handleExpenseListUpdate(expenses);
     }, [expenses]);
+    */    
+    }
  
     const handleInputChange = (e, isExpense = true) => {
         const { name, value } = e.target;
